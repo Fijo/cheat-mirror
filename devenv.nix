@@ -1,10 +1,6 @@
 { pkgs, lib, config, inputs, ... }:
 
 {
-  # https://devenv.sh/basics/
-  env.GREET = "fijo cheat devenv says hi!";
-
-  # https://devenv.sh/packages/
   packages = with pkgs; [
     git
   ];
@@ -17,53 +13,39 @@
     ]);
     # venv.enable = true;
   };
+  languages.nix = {
+    enable = true;
+    lsp.enable = true;
+  };
 
   # https://devenv.sh/processes/
-  # processes.dev.exec = "${lib.getExe pkgs.watchexec} -n -- ls -la";
+  processes.serve = {
+    ports.http.allocate = 8080;
+    exec = ''
+      mkdocs serve -a localhost:${toString config.processes.serve.ports.http.value}
+    '';
+  };
 
-  # https://devenv.sh/services/
-  # services.postgres.enable = true;
-
-  # https://devenv.sh/scripts/
-  scripts.hello.exec = ''
-    echo hello from $GREET
-  '';
-
-  # https://devenv.sh/basics/
-  enterShell = ''
-    hello         # Run scripts directly
-    git --version # Use packages
-  '';
-
-  # https://devenv.sh/tasks/
-  # tasks = {
-  #   "myproj:setup".exec = "mytool build";
-  #   "devenv:enterShell".after = [ "myproj:setup" ];
-  # };
-
-  # jnoortheen.nix-ide
-  #tasks = {
-  #  "build" = {
-  #    exec = ''
-  #      ${pkgs.mkdocs}/bin/mkdocs
-  #    '';
-  #    execIfModified = [
-  #      "*.md"
-  #    ];
-  #    #cwd = "./frontend";
-  #  };
-  #};
-
-  # https://devenv.sh/tests/
-  enterTest = ''
-    echo "Running tests"
-    git --version | grep --color=auto "${pkgs.git.version}"
-  '';
-
-  # https://devenv.sh/git-hooks/
-  # git-hooks.hooks.shellcheck.enable = true;
+  tasks = {
+    "app:build" = {
+      exec = ''
+        mkdocs build
+      '';
+      execIfModified = [
+        "*.md"
+        "mkdocs.yml"
+      ];
+    };
+    #"devenv:enterShell".after = [ "app:start" ];
+  };
   
-  devcontainer.enable = true;
-
-  # See full reference at https://devenv.sh/reference/options/
+  devcontainer = {
+    enable = true;
+    settings.customizations.vscode.extensions = [
+      "redhat.vscode-yaml"
+      "DavidAnson.vscode-markdownlint"
+      "streetsidesoftware.code-spell-checker"
+      "jnoortheen.nix-ide"
+    ];
+  };
 }

@@ -19,5 +19,13 @@
         "editorGroupHeader.tabsBorder": "#a7d129",
 
         "focusBorder": "#a7d129"
-    }
+    },
+    
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "editor.glyphMargin": false,
+
+    "cSpell.language": "en-GB",
+
+    "telemetry.telemetryLevel": "off"
 }
