@@ -6,5 +6,8 @@ devenv.local.yaml
 # direnv
 .direnv
 
+# devcontainer
+/.devcontainer.json
+
 # pre-commit
 .pre-commit-config.yaml
