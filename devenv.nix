@@ -5,10 +5,18 @@
   env.GREET = "fijo cheat devenv says hi!";
 
   # https://devenv.sh/packages/
-  packages = [ pkgs.git ];
+  packages = with pkgs; [
+    git
+  ];
 
-  # https://devenv.sh/languages/
-  # languages.rust.enable = true;
+  languages.python = {
+    enable = true;
+    package = pkgs.python3.withPackages (ps: [
+      ps.mkdocs
+      ps.mkdocs-material
+    ]);
+    # venv.enable = true;
+  };
 
   # https://devenv.sh/processes/
   # processes.dev.exec = "${lib.getExe pkgs.watchexec} -n -- ls -la";
@@ -32,6 +40,19 @@
   #   "myproj:setup".exec = "mytool build";
   #   "devenv:enterShell".after = [ "myproj:setup" ];
   # };
+
+  # jnoortheen.nix-ide
+  #tasks = {
+  #  "build" = {
+  #    exec = ''
+  #      ${pkgs.mkdocs}/bin/mkdocs
+  #    '';
+  #    execIfModified = [
+  #      "*.md"
+  #    ];
+  #    #cwd = "./frontend";
+  #  };
+  #};
 
   # https://devenv.sh/tests/
   enterTest = ''
