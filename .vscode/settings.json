@@ -1,0 +1,23 @@
+{
+    "workbench.colorCustomizations": {
+        "commandCenter.background": "#a7d129",
+        "commandCenter.foreground": "#1d291f",
+        
+        "statusBar.background": "#a7d129",
+        "statusBar.foreground": "#1d291f",
+        
+        "editor.background": "#0a0f0b",
+        "sideBar.background": "#0a0f0b",
+
+        "activityBar.background": "#0a0f0b",
+        "activityBar.foreground": "#a7d129",
+
+        "tab.activeBackground": "#0a0f0b",
+        "tab.inactiveBackground": "#0a0f0b",
+        "titleBar.activeBackground": "#0a0f0b",
+        "titleBar.inactiveBackground": "#0a0f0b",
+        "editorGroupHeader.tabsBorder": "#a7d129",
+
+        "focusBorder": "#a7d129"
+    }
+}
