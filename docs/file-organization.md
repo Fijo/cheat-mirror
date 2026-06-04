@@ -4,10 +4,10 @@
 ```bash
 mc
 ```
-how to [customize the columns](https://unix.stackexchange.com/questions/623219/have-mc-show-size-time-and-permissions-at-once)
-help on [mc usage](https://www.tecmint.com/midnight-commander-a-console-based-file-manager-for-linux/)
-[background job feature](https://bbs.archlinux.org/viewtopic.php?pid=491816#p491816) in mc
-[cheatsheet](https://gist.github.com/samiraguiar/9cd4264445545cfd459d) for mc
+- how to [customize the columns](https://unix.stackexchange.com/questions/623219/have-mc-show-size-time-and-permissions-at-once)
+- help on [mc usage](https://www.tecmint.com/midnight-commander-a-console-based-file-manager-for-linux/)
+- [background job feature](https://bbs.archlinux.org/viewtopic.php?pid=491816#p491816) in mc
+- [cheatsheet](https://gist.github.com/samiraguiar/9cd4264445545cfd459d) for mc
 
 ## ensure a folder has been copied
 

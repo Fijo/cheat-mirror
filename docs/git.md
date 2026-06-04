@@ -2,7 +2,7 @@
 
 ## Move remote repo
 
-```
+``` sh
 git fetch origin
 git branch -a
 git remote add new-origin git@github.com:Fijo/myRepo.git
@@ -12,4 +12,4 @@ git remote rm origin
 git remote rename new-origin origin
 ```
 
-[Source](https://stackoverflow.com/a/38303789)
+Based on [source](https://stackoverflow.com/a/38303789)

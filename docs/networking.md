@@ -24,4 +24,4 @@
 
 ## DNS Lookup using specific Nameserver
 
-dig @93.177.67.109 -t any traefik.fijo.dev
+`dig @93.177.67.109 -t any traefik.fijo.dev`

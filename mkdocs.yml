@@ -1,0 +1,18 @@
+site_name: Fijo Cheatsheets
+site_url: https://cheat.fijo.dev
+repo_url: https://codeberg.org/Fijo/cheat
+site_author: Jonas Fischer
+copyright: Copyright © 2026 Jonas Fischer
+
+docs_dir: docs
+not_in_nav: |
+  index.md
+
+theme:
+  name: material
+  locale: en
+  highlightjs: true
+
+#markdown_extensions:
+#  - toc:
+

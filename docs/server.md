@@ -64,4 +64,4 @@ finding UUID of partitions:
 
 To get an overview of present CPU vulnerabilities and their mitigations, run `lscpu`. Current real-world known vulnerabilities can only show up if the Proxmox VE host is up to date, its version not end of life, and has at least been rebooted since the last kernel update.
 
-[Source](https://proxmox.fijo.dev/pve-docs/chapter-sysadmin.html#sysadmin_firmware_cpu)
+based on [source](https://proxmox.fijo.dev/pve-docs/chapter-sysadmin.html#sysadmin_firmware_cpu)
