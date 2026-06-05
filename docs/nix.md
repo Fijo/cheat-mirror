@@ -45,3 +45,4 @@ Follow the [Standalone installation Guide](https://nix-community.github.io/home-
 - [Nix Channel Status](https://status.nixos.org/)
 - [Nix Language: derivations](https://nix.dev/manual/nix/2.28/language/derivations)
 - [stdenv.mkDerivation](https://nixos.org/manual/nixpkgs/stable/#sec-using-stdenv)
+- [stdenv.mkDerivation: which folders go where](https://github.com/NixOS/nixpkgs/blob/master/pkgs/build-support/setup-hooks/multiple-outputs.sh)
