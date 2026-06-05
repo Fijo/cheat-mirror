@@ -5,8 +5,6 @@ let pyPackage = pkgs.python3.withPackages (ps: [ps.mkdocs ps.mkdocs-material]);
 in {
   # cachix.enable = false;
 
-  
-
   packages = with pkgs; [
     git
   ];
@@ -21,7 +19,6 @@ in {
     lsp.enable = true;
   };
 
-  # https://devenv.sh/processes/
   processes.serve = {
     ports.http.allocate = 8080;
     exec = ''
@@ -39,7 +36,6 @@ in {
   #       "mkdocs.yml"
   #     ];
   #   };
-  #   #"devenv:enterShell".after = [ "app:start" ];
   # };
   
   devcontainer = {
@@ -54,7 +50,7 @@ in {
 
   outputs = {
     fijo-cheat = pkgs.stdenv.mkDerivation {
-      pname = "fijo-cheat"; # -devdoc ??
+      pname = "fijo-cheat"; # -devdoc
       version = "0.3";
 
       outputs = [ "out" ];
@@ -75,7 +71,6 @@ in {
         runHook postBuild
       '';
     };
-    # py = languages.python.package;
   };
 
 }
