@@ -1,16 +1,19 @@
 { pkgs, lib, config, inputs, ... }:
 
-{
+let pyPackage = pkgs.python3.withPackages (ps: [ps.mkdocs ps.mkdocs-material]);
+
+in {
+  # cachix.enable = false;
+
+  
+
   packages = with pkgs; [
     git
   ];
 
   languages.python = {
     enable = true;
-    package = pkgs.python3.withPackages (ps: [
-      ps.mkdocs
-      ps.mkdocs-material
-    ]);
+    package = pyPackage;
     # venv.enable = true;
   };
   languages.nix = {
@@ -26,18 +29,18 @@
     '';
   };
 
-  tasks = {
-    "app:build" = {
-      exec = ''
-        mkdocs build
-      '';
-      execIfModified = [
-        "*.md"
-        "mkdocs.yml"
-      ];
-    };
-    #"devenv:enterShell".after = [ "app:start" ];
-  };
+  # tasks = {
+  #   "app:build" = {
+  #     exec = ''
+  #       mkdocs build
+  #     '';
+  #     execIfModified = [
+  #       "*.md"
+  #       "mkdocs.yml"
+  #     ];
+  #   };
+  #   #"devenv:enterShell".after = [ "app:start" ];
+  # };
   
   devcontainer = {
     enable = true;
@@ -48,4 +51,31 @@
       "jnoortheen.nix-ide"
     ];
   };
+
+  outputs = {
+    fijo-cheat = pkgs.stdenv.mkDerivation {
+      pname = "fijo-cheat"; # -devdoc ??
+      version = "0.3";
+
+      outputs = [ "out" ];
+
+      src = builtins.path {
+        path = ./.;
+        name = "source";
+      };
+
+      nativeBuildInputs = [ pyPackage ];
+
+      buildPhase = ''
+        runHook preBuild
+
+        mkdir -p $out/share/fijo-cheat/html
+        mkdocs build --site-dir $out/share/fijo-cheat/html
+        
+        runHook postBuild
+      '';
+    };
+    # py = languages.python.package;
+  };
+
 }

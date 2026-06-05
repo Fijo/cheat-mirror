@@ -26,6 +26,10 @@
     "editor.glyphMargin": false,
 
     "cSpell.language": "en-GB",
+    "cSpell.enabledFileTypes": {
+        "*": false,
+        "markdown": true
+    },
 
     "telemetry.telemetryLevel": "off"
 }
