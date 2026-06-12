@@ -36,5 +36,3 @@ On the remote server you can find out its fingerprint(s) as follows:
 SSH host keys are stored in `/etc/ssh/`, which you generally do not need to choose. These keys were generated when the openssh-server package was installed.
 
 You can list the fingerprint of the keys by `ssh-keygen -l -f /etc/ssh/ssh_host_key.pub` though you will need to repeat this for each public key.
-
-

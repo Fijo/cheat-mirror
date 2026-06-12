@@ -1,10 +1,11 @@
-# ZFS 
+# ZFS
 
 ## Stats
 
 `arcstat`
 
 `arc_summary | more`
+
 `arc_summary -d | more`
 
 `zpool iostat [tank] 1`

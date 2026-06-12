@@ -1,4 +1,4 @@
-# User managment
+# User management
 
 ## See who is logged on Linux system and what they are doing
 
@@ -7,8 +7,8 @@
 ## See users existing on system
 
 `less /etc/passwd`
-`cut -d: -f1 /etc/passwd` (only names)
 
+`cut -d: -f1 /etc/passwd` (only names)
 
 ## See uid ranges
 
