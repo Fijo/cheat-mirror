@@ -23,6 +23,9 @@ zfs mount apool/subvol-101-disk-0
 test first with
 `zfs list -r -t snapshot apool -o name | grep syncoid | xargs -d '\n' -n1 zfs get available`
 
+## List snapshots
+`zfs list -r -t snapshot -o name,creation rpool`
+
 ## useful websites
 
 <https://discourse.practicalzfs.com/>
