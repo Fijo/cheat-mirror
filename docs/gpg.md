@@ -7,4 +7,3 @@
 `gpg -K`
 
 based on [source](https://superuser.com/a/1150399)
-

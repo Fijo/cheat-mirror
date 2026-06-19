@@ -1,9 +1,10 @@
 # APT
 
-## Generel
+## General
 
 ### Marking package as automatically installed
 `apt-mark auto [my-package]`
+
 ### List manually installed packages
 `apt list --manual-installed`
 
@@ -11,7 +12,6 @@
 
 ### showing policies
 `apt-cache policy`
+
 ### documentation on pining and priorities
 `man apt_preferences`
-
-

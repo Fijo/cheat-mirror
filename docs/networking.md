@@ -9,9 +9,9 @@
 
 `ss -lntu`
 
-## Test bandwith:
+## Test bandwith
 
-### on server:
+### on server
 `sudo nice -n -15 iperf3 -s`
 
 ### on client
@@ -19,7 +19,7 @@
 
 -P 3 means 3 parallel connections
 
-## Backup your network file using the following command.
+## Backup your network file using the following command
 `cp /etc/network/interfaces /etc/network/interfaces.bak`
 
 ## DNS Lookup using specific Nameserver

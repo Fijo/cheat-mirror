@@ -20,7 +20,7 @@
 `nix build .#package-name` for flakes
 `nix build -f my-file.nix` for non flakes
 
-nix-build '<nixpkgs>' --attr openssl.all
+`nix-build '<nixpkgs>' --attr openssl.all`
 
 `nix derivation show /nix/store/z3hhlxbckx4g3n9sw91nnvlkjvyw754p-myname.drv` inspecting a derivation
 

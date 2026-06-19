@@ -29,10 +29,5 @@ from man page
 `cat xyz | grep PATTERN -`
 Default patter accepted is BRE see <https://learnbyexample.github.io/learn_gnugrep_ripgrep/breere-regular-expressions.html#breere-regular-expressions>
 
-
 ## watch file modifications in directory
 `watch -n1 'find $PWD -type f -printf "%T@ %Tc %p\n" | sort -nr | head -10'`
-
-
-
-
