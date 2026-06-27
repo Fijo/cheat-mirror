@@ -17,6 +17,7 @@ This also shows the size of the dedup table:
 `arc_summary -d | more`
 
 `zpool iostat [tank] 1`
+`zpool iostat [tank] -v 1`
 
 ## Manual mounting
 
@@ -74,6 +75,11 @@ test first with
 **Caution: there is no undo or disable later! This might be a bad idea! Some features can cause considerable issues in the future!**
 To upgrade a specific pool and enable all new features, run:
 `zpool upgrade apool`
+
+## Maintenance
+
+### Clear faulted state
+`zpool clear <pool_name> <drive_identifier>`
 
 ## useful websites
 

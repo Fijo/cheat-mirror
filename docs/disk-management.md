@@ -6,6 +6,9 @@
 ## List disks by id
 `ls -l /dev/disk/by-id/`
 
+## Power off drive
+`udisksctl power-off -b /dev/sdX`
+
 ## Partitioning
 
 ### Intuitive interactive partitioning setup
