@@ -8,6 +8,9 @@
 
 ## Partitioning
 
+### Intuitive interactive partitioning setup
+`fdisk /dev/sdX`
+
 ### Delete partition table
 `sfdisk --delete /dev/sdX`
 
