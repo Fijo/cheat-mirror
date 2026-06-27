@@ -17,7 +17,12 @@
 ### DD with status
 `dd if=/dev/sdX of=/dev/sdY status=progress`
 
-### Smart stats
+## Formatting
+
+### Format partition with ext4
+`mkfs -t ext4 /dev/sdX1`
+
+## Smart stats
 `smartctl -A /dev/sdX`
 
 If you only have **Host_Writes_32MiB** and the **TBW**-endurance rating from the ssd manufacturers website,
