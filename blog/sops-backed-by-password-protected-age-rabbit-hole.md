@@ -11,6 +11,8 @@ as they should, well you can't really ever not have your secret key unlocked.
 Also if an attacker can read files from disk with certain permissions alot of the time we have lost already anyway. The best way to limit this would be to restrict file read permissions and use a password.  
 Once someone can read with root permissions there are keyfiles all over the systems, that would have this issue.
 
+Something that would actually maybe make more sense, would be to use sth like the tpm plugin for age or sth like that.
+
 Anyway before I knew better I went down this rabbit hole.
 
 ## Age & sops with password
@@ -67,4 +69,3 @@ SOPS_AGE_KEY_CMD="~/.pass.sh" sops decrypt ./config.json
 
 - See [age on github](https://github.com/FiloSottile/age).  
 - <https://devops.datenkollektiv.de/using-sops-with-age-and-git-like-a-pro.html>
-
