@@ -25,3 +25,12 @@
 ## DNS Lookup using specific Nameserver
 
 `dig @93.177.67.109 -t any traefik.fijo.dev`
+
+## bring network interface up
+`ip link set dev enp4s0 up`
+
+## fix speed to be 10G
+`ethtool -s enp4s0 speed 10000 duplex full autoneg on advertise 0x100000000000`
+
+## check interface status
+`ethtool -s enp4s0`
