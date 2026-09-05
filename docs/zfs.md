@@ -49,8 +49,8 @@ More details [here](https://openzfs.github.io/openzfs-docs/man/master/8/zfs-dest
 
 ### Destroy all snapshots containing syncoid
 
-`zfs list -r -t snapshot apool -o name | grep syncoid | xargs -d '\n' -n1 zfs destroy`
-test first with
+`zfs list -r -t snapshot apool -o name | grep syncoid | xargs -d '\n' -n1 zfs destroy`  
+test first with  
 `zfs list -r -t snapshot apool -o name | grep syncoid | xargs -d '\n' -n1 zfs get available`
 
 ## Get zfs multiple properties
