@@ -8,6 +8,7 @@
 
 
 `nix-channel --update`
+`nix flake update`
 
 `vim ~/.config/home-manager/home.nix`
 `home-manager switch`

@@ -23,14 +23,17 @@
 `cp /etc/network/interfaces /etc/network/interfaces.bak`
 
 ## DNS Lookup using specific Nameserver
-
 `dig @93.177.67.109 -t any traefik.fijo.dev`
 
 ## bring network interface up
-`ip link set dev enp4s0 up`
+`ip link set dev enp1s0 up`
 
 ## fix speed to be 10G
 `ethtool -s enp4s0 speed 10000 duplex full autoneg on advertise 0x100000000000`
 
 ## check interface status
-`ethtool -s enp4s0`
+`ethtool -s enp1s0`
+
+## check active network driver
+(helps to identify by which hardware a network devices is backed)
+`ethtool -i enp1s0`
