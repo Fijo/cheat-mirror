@@ -59,6 +59,13 @@ test first with
 ## Get zfs dedup ratio
 `zpool get dedupratio apool`
 
+## Get detailed stats about dedup
+
+`zpool status -D apool`
+
+For very detailed in memory stats:
+`zdb -D apool`
+
 ## Importing zpool
 (without mounting)
 `zpool import -N bpool`

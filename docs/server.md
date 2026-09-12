@@ -9,6 +9,11 @@ atop  # launch it and press 'm' (memory usage) and 'p' (group by process name).
 btop
 ```
 
+## drives usage
+
+Monitor drive usage every 5 seconds for just /dev/sdc, /dev/sde, /dev/sdg and /dev/sdc.
+`S_COLORS=always SGR_COLORS=always iostat -xz 5 | grep -E "^Device|sd[cegh]"`
+
 ## GPU
 `intel_gpu_top`
 (requires apt-get install intel-gpu-tools)
