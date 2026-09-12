@@ -59,6 +59,17 @@ test first with
 ## Get zfs dedup ratio
 `zpool get dedupratio apool`
 
+## Importing zpool
+(without mounting)
+`zpool import -N bpool`
+if you get this:  
+cannot import 'bpool': more than one matching pool  
+import by numeric ID instead
+
+find the pool id by doing:
+`zdb -l /dev/disk/by-id/XXXXXXXXXXXXXXXXXXXX-part1 | grep pool_guid`
+
+
 ## Working with zpool features
 
 ### List list feature values
