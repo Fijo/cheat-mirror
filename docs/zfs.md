@@ -5,8 +5,12 @@
 This also includes size, used vs free, dedup ratio and fragmentation:
 `zpool list`
 
-This also shows the size of the dedup table:
+### Get detailed stats about dedup
+Also shows the size of the dedup table:
 `zpool status -D apool`
+
+For very detailed in memory stats:
+`zdb -D apool`
 
 ## Stats
 
@@ -18,6 +22,9 @@ This also shows the size of the dedup table:
 
 `zpool iostat [tank] 1`
 `zpool iostat [tank] -v 1`
+
+### monitor drive io latency
+`zpool iostat [tank] -lvy 1`
 
 ## Manual mounting
 
@@ -58,13 +65,6 @@ test first with
 
 ## Get zfs dedup ratio
 `zpool get dedupratio apool`
-
-## Get detailed stats about dedup
-
-`zpool status -D apool`
-
-For very detailed in memory stats:
-`zdb -D apool`
 
 ## Importing zpool
 (without mounting)
